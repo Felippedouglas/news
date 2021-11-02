@@ -144,10 +144,6 @@ html {
     cursor: pointer;
 }
 
-.content-principal:first-child {
-    padding-top: 50px;
-}
-
 .noticia-principal {
     position: relative;
     width: 100%;
@@ -647,6 +643,10 @@ html {
 
     .content-principal {
         width: 100%;
+    }
+	
+    .content-principal:first-child {
+    	padding-top: 50px;
     }
 
     .noticia-principal {
