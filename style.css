@@ -600,10 +600,6 @@ html {
         cursor: pointer;
     }
 
-    .principais-noticias-fita {
-        display: none;
-    }
-
     .section-noticia-principal {
         padding: 50px 10px 10px 10px;
     }
@@ -722,6 +718,10 @@ html {
 @media (max-width:500px) {
     
     .container{
+        display: none;
+    }  
+
+    .principais-noticias-fita {
         display: none;
     }
 
