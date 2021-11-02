@@ -144,6 +144,10 @@ html {
     cursor: pointer;
 }
 
+.content-principal:first-child {
+    padding-top: 50px;
+}
+
 .noticia-principal {
     position: relative;
     width: 100%;
@@ -452,7 +456,7 @@ html {
 .container .slider .slide .caption{
     position: absolute;
     bottom: 0;
-    padding: 15px;
+    padding: 30px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.01), #000);
     border-bottom: 5px solid #C4170C;
     transition:0.5s;
