@@ -9,3 +9,31 @@ function desativarDarkTheme() {
     document.getElementById("dark-theme").style.display = "block"
     document.getElementById("dark-theme-off").style.display = "none"
 }
+
+function abrirPesquisar() {
+    document.getElementById("exibir-search").style.display = "block"
+}
+
+function fecharPesquisar() {
+    document.getElementById("exibir-search").style.display = "none"
+}
+
+function sugestão1() {
+    document.getElementById("search").value = "Economia"
+}
+
+function sugestão2() {
+    document.getElementById("search").value = "Natureza"
+}
+
+function sugestão3() {
+    document.getElementById("search").value = "Tecnologia"
+}
+
+function sugestão4() {
+    document.getElementById("search").value = "Futebol"
+}
+
+function sugestão5() {
+    document.getElementById("search").value = "Esports"
+}
