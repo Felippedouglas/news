@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
   <nav class="nav-bar">
     <ul>
       <li>
@@ -29,10 +28,9 @@
     <a href="#dt-news-inicio">
       <h1 class="titulo-pagina" id="titulo-pagina">DT News</h1>
     </a>
-    <form action="" method="get" class="form-pesquisa">
-      <section class="section-pesquisar">
+    <section class="form-pesquisa">
+      <section class="section-pesquisar" onclick="abrirPesquisar()">
         <img src="./lupa fill.svg" alt="lupa">
-        <input type="search" name="cmsearch" placeholder="BUSCAR" autocomplete="off">
       </section>
       <section class="section-dark-theme">
         <label>
@@ -40,8 +38,31 @@
           <img src="./img icones/lua.svg" alt="sol e lua" id="dark-theme-off" onclick="desativarDarkTheme()">
         </label>
       </section>
-    </form>
+    </section>
   </nav>
+
+
+  <section class="pesquisar" id="exibir-search">
+    <section class="input">
+      <form action="" method="get">
+        <input id="search" type="search" name="dtsearch" placeholder="BUSCAR" autocomplete="off" required>
+        <button type="submit" class="bt-enviar-pesquisa">
+          <img src="./lupa search.svg" alt="" height="35px">
+        </button>
+      </form>
+      <button id="bt-fechar-search" onclick="fecharPesquisar()">
+        <img src="./img icones/x.svg" alt="" height="100px">
+      </button>
+    </section>
+    <section class="sugestoes">
+      <span>sugestões</span>
+      <section class="sugestao" onclick="sugestão1()">economia</section>
+      <section class="sugestao" onclick="sugestão2()">natureza</section>
+      <section class="sugestao" onclick="sugestão3()">tecnologia</section>
+      <section class="sugestao" onclick="sugestão4()">futebol</section>
+      <section class="sugestao" onclick="sugestão5()">esports</section>
+    </section>
+  </section>
 
   <div class="container" id="dt-news-inicio">
     <div class="slider">
@@ -84,7 +105,8 @@
       <a
         href="https://g1.globo.com/sp/campinas-regiao/noticia/2021/10/29/com-demanda-por-combustivel-em-alta-maior-refinaria-da-petrobras-tem-menor-producao-do-ano.ghtml">
         <div class="slide slide4">
-          <img src="https://media.gazetadopovo.com.br/2020/09/29190600/petrobras-marcello-casal-jr-abr-960x540.jpg" alt="">
+          <img src="https://media.gazetadopovo.com.br/2020/09/29190600/petrobras-marcello-casal-jr-abr-960x540.jpg"
+            alt="">
           <div class="caption">
             <h2>Com demanda por combustível em alta,refinaria da Petrobras tem menor produção do ano</h2>
             <p>Planta em Paulínia processou 1.546.811 metros cúbicos de petróleo em setembro, volume 10,5% menor que na
@@ -108,7 +130,7 @@
 
   <div class="display-flex" id="display-flex">
     <div class="content-principal">
-      <section class="noticia-principal">
+      <section class="noticia-principal" id="padding-top-mobile">
         <a
           href="https://g1.globo.com/economia/tecnologia/noticia/2021/11/02/leilao-do-5g-acontece-nesta-semana-quando-chega-precisa-trocar-de-celular-veja-respostas.ghtml">
           <span class="principais-noticias-fita">TECNOLOGIA</span>
