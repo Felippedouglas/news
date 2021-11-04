@@ -79,7 +79,6 @@ html {
     align-items: center;
     justify-content: center;
     padding: 2px;
-    margin-right: 10px;
     border-radius: 50%;
     width: 45px;
     height: 45px;
@@ -210,8 +209,17 @@ html {
 
 .section-dark-theme {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 0 10px;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.section-dark-theme:hover {
+    background-color: #A7140A;
+    transition: .3s;
 }
 
 .section-dark-theme label img{
