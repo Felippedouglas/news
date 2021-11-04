@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DT News</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <link rel="shortcut icon" type="imagex/jpg" href="./img icones/logo.jpg">
+</head>
+
+<body>
+  <nav class="nav-bar">
+    <ul>
+      <li>
+        <a href="" target="_blank">
+          <img src="./instagram.svg" alt="instagram">
+        </a>
+      </li>
+      <li>
+        <a href="" target="_blank">
+          <img src="./twitter.svg" alt="twitter">
+        </a>
+      </li>
+    </ul>
+    <a href="#dt-news-inicio">
+      <h1 class="titulo-pagina" id="titulo-pagina">DT News</h1>
+    </a>
+    <section class="form-pesquisa">
+      <section class="section-pesquisar" onclick="abrirPesquisar()">
+        <img src="./lupa fill.svg" alt="lupa">
+      </section>
+      <section class="section-dark-theme">
+        <label>
+          <img src="./img icones/sol.svg" alt="sol e lua" id="dark-theme" onclick="ativarDarkTheme()">
+          <img src="./img icones/lua.svg" alt="sol e lua" id="dark-theme-off" onclick="desativarDarkTheme()">
+        </label>
+      </section>
+    </section>
+  </nav>
+
+
+  <section class="pesquisar" id="exibir-search">
+    <section class="input">
+      <form action="" method="get">
+        <input id="search" type="search" name="dtsearch" placeholder="BUSCAR" autocomplete="off" required>
+        <button type="submit" class="bt-enviar-pesquisa">
+          <img src="./lupa search.svg" alt="" height="35px">
+        </button>
+      </form>
+      <button id="bt-fechar-search" onclick="fecharPesquisar()">
+        <img src="./img icones/x.svg" alt="" height="100px">
+      </button>
+    </section>
+    <section class="sugestoes">
+      <span>sugestões</span>
+      <section class="sugestao" onclick="insert('economia')">economia</section>
+      <section class="sugestao" onclick="insert('natureza')">natureza</section>
+      <section class="sugestao" onclick="insert('tecnologia')">tecnologia</section>
+      <section class="sugestao" onclick="insert('futebol')">futebol</section>
+      <section class="sugestao" onclick="insert('esports')">esports</section>
+    </section>
+  </section>
+
+  <div class="container" id="dt-news-inicio">
+    <div class="slider">
+      <a
+        href="https://g1.globo.com/economia/negocios/noticia/2021/11/01/burger-king-desiste-de-assumir-as-operacoes-da-dominos-pizza-no-mercado-brasileiro.ghtml">
+        <div class="slide slide1">
+          <img src="https://razoesparaacreditar.com/wp-content/uploads/2020/03/burguer-king-doara-receita-sus.jpg"
+            alt="">
+          <div class="caption">
+            <h2>Burger King desiste de assumir operações da Domino's Pizza no mercado brasileiro</h2>
+            <p>Motivação de desfazer o negócio levou em conta uma "reavaliação das partes sobre as atuais condições de
+              mercado". Distrato não gerou penalização para nenhuma das empresas.
+            </p>
+          </div>
+        </div>
+      </a>
+      <a
+        href="https://g1.globo.com/tecnologia/noticia/2021/11/02/facebook-vai-desativar-sistema-de-reconhecimento-facial.ghtml">
+        <div class="slide slide2">
+          <img
+            src="https://docmanagement.com.br/wp-content/uploads/2020/02/20190606011251_1200_675_-_reconhecimento_facial___ms_celeb.jpg"
+            alt="">
+          <div class="caption">
+            <h2>Facebook vai desativar sistema de reconhecimento facial</h2>
+            <p>A rede social excluirá os "modelos de reconhecimento facial" de mais de 1 bilhão de pessoas.</p>
+          </div>
+        </div>
+      </a>
+      <a
+        href="https://ge.globo.com/futebol/futebol-internacional/futebol-espanhol/noticia/barcelona-espera-anunciar-xavi-como-treinador-nos-proximos-dias-diz-jornalista.ghtml">
+        <div class="slide slide3">
+          <img src="https://esportenewsmundo.com.br/wp-content/uploads/2021/09/xavihernandez.jpg" alt="">
+          <div class="caption">
+            <h2>Barcelona espera anunciar Xavi como treinador nos próximos dias, diz jornalista</h2>
+            <p>Italiano Fabrizio Romano, repórter especialista no mercado de transferências da Europa, afirma que o
+              clube vê o acerto como "questão de tempo"</p>
+          </div>
+        </div>
+      </a>
+      <a
+        href="https://g1.globo.com/sp/campinas-regiao/noticia/2021/10/29/com-demanda-por-combustivel-em-alta-maior-refinaria-da-petrobras-tem-menor-producao-do-ano.ghtml">
+        <div class="slide slide4">
+          <img src="https://media.gazetadopovo.com.br/2020/09/29190600/petrobras-marcello-casal-jr-abr-960x540.jpg"
+            alt="">
+          <div class="caption">
+            <h2>Com demanda por combustível em alta,refinaria da Petrobras tem menor produção do ano</h2>
+            <p>Planta em Paulínia processou 1.546.811 metros cúbicos de petróleo em setembro, volume 10,5% menor que na
+              comparação com o mesmo período de 2020.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <div class="slide slide1">
+        <img src="https://razoesparaacreditar.com/wp-content/uploads/2020/03/burguer-king-doara-receita-sus.jpg" alt="">
+        <div class="caption">
+          <h2>Burger King desiste de assumir operações da Domino's Pizza no mercado brasileiro</h2>
+          <p>Motivação de desfazer o negócio levou em conta uma "reavaliação das partes sobre as atuais condições de
+            mercado". Distrato não gerou penalização para nenhuma das empresas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="display-flex" id="display-flex">
+    <div class="content-principal">
+      <section class="noticia-principal" id="padding-top-mobile">
+        <a
+          href="https://g1.globo.com/economia/tecnologia/noticia/2021/11/02/leilao-do-5g-acontece-nesta-semana-quando-chega-precisa-trocar-de-celular-veja-respostas.ghtml">
+          <span class="principais-noticias-fita">TECNOLOGIA</span>
+          <section class="section-noticia-principal">
+            <p class="titulo-noticia-principal">A Agência Nacional de Telecomunicações (Anatel) vai realizar nesta
+              quinta-feira (4) o leilão do 5G</p>
+            <p class="subtitulo-noticia-principal">A tecnologia promete uma revolução: conexão com velocidade
+              ultrarrápida, avanços de tecnologias como carros que dirigem sozinh...</p>
+          </section>
+          <img src="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2021/11/01112427/5G.jpg" alt="">
+        </a>
+      </section>
+      <section class="noticia-principal">
+        <a
+          href="https://www.google.com/amp/s/ge.globo.com/google/amp/futebol/futebol-internacional/noticia/messi-evita-comparar-trios-e-celebra-aproximacao-com-mbappe-foi-estranho-no-comeco.ghtml">
+          <span class="principais-noticias-fita">FUTEBOL INTERNACIONAL</span>
+          <section class="section-noticia-principal">
+            <p class="titulo-noticia-principal">Messi evita comparar trios e celebra aproximação com Mbappé: "Foi
+              estranho no começo"</p>
+            <p class="subtitulo-noticia-principal">Devido a compromissos internacionais e lesões, o MNM disputou apenas
+              seis partidas junto</p>
+          </section>
+          <img
+            src="https://s2.glbimg.com/OaXhJZE1TowGDFt9tOe_f48WEw4=/0x0:3867x2654/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2021/t/p/pgOslISpCmSl74X7xMaQ/gettyimages-1343632518.jpg"
+            alt="">
+        </a>
+      </section>
+
+      <section class="economia">
+        <span class="span-economia">Moedas e Economia</span>
+        <section>
+          <span class="titulo-economia">Dólar</span>
+          <span class="valor">R$ 5,590</span>
+          <p class="porcentagem-economia">+0,01%</p>
+        </section>
+        <section>
+          <span class="titulo-economia">Euro</span>
+          <span class="valor-economia">R$ 6,460</span>
+          <p class="porcentagem-economia">-0,43%</p>
+        </section>
+        <section>
+          <span class="titulo-economia">Ibovespa</span>
+          <span class="valor-economia">105,617 pts</span>
+          <p class="porcentagem-economia">+0,06%</p>
+        </section>
+        <span class="hora-ultima-atualizacao" id="principais-noticias">22:00 | 03/11/21</span>
+      </section>
+
+      <section class="off-mobile">
+        <section class="noticia-principal">
+          <a
+            href="https://ge.globo.com/futebol/futebol-internacional/futebol-espanhol/noticia/apos-sofrer-arritmia-aguero-vai-ficar-pelo-menos-tres-meses-afastado.ghtml">
+            <span class="principais-noticias-fita">FUTEBOL ESPANHOL</span>
+            <section class="section-noticia-principal">
+              <p class="titulo-noticia-principal">Após sofrer arritmia, Agüero vai ficar pelo menos três meses afastado
+                no Barcelona</p>
+              <p class="subtitulo-noticia-principal">Clube diz que a avaliação da efetividade do tratamento ao atacante
+                que vai determinar um prazo de retorno. </p>
+            </section>
+            <img
+              src="https://s2.glbimg.com/D84-rreqqPwQx5nopdmXCWaL6u4=/0x0:2691x1845/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2021/v/X/LSvRg4R9mPhY7B7XB6ww/gettyimages-1236245244.jpg"
+              alt="">
+          </a>
+        </section>
+        <section class="noticia-principal">
+          <a
+            href="https://news.google.com/articles/CBMigQFodHRwczovL3d3dy5jYW1wb2dyYW5kZW5ld3MuY29tLmJyL2VkdWNhY2FvLWUtdGVjbm9sb2dpYS9jdXN0YW5kby1yLTEtNy1taWwtbm92by1yZWRtaS1ub3RlLTExLXByby1yZWNhcnJlZ2EtZW0tYXBlbmFzLTE1LW1pbnV0b3PSAYEBaHR0cHM6Ly9hbXAuY2FtcG9ncmFuZGVuZXdzLmNvbS5ici9lZHVjYWNhby1lLXRlY25vbG9naWEvY3VzdGFuZG8tci0xLTctbWlsLW5vdm8tcmVkbWktbm90ZS0xMS1wcm8tcmVjYXJyZWdhLWVtLWFwZW5hcy0xNS1taW51dG9z?hl=pt-BR&gl=BR&ceid=BR%3Apt-419">
+            <span class="principais-noticias-fita">TECNOLOGIA</span>
+            <section class="section-noticia-principal">
+              <p class="titulo-noticia-principal">Custando R$ 1,7 mil, novo Redmi Note 11 Pro+ recarrega em apenas 15
+                minutos</p>
+              <p class="subtitulo-noticia-principal">Anúncio foi feito pela Xiaomi em conferência realizada na China</p>
+            </section>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2XEIcpxxYKEqTnYrbtPmYtjRrDQltM_heQQ&usqp=CAU"
+              alt="">
+          </a>
+        </section>
+        <section class="noticia-principal">
+          <a
+            href="https://g1.globo.com/economia/agronegocios/agro-a-industria-riqueza-do-brasil/noticia/2021/11/02/de-onde-vem-o-que-eu-como-extincao-das-abelhas-pode-definir-o-futuro-da-alimentacao.ghtml">
+            <span class="principais-noticias-fita">NATUREZA</span>
+            <section class="section-noticia-principal">
+              <p class="titulo-noticia-principal">Muito além do mel: por que a extinção de abelhas pode ser desastrosa
+              </p>
+              <p class="subtitulo-noticia-principal">Sem elas, também pode acabar a produção de acerola, maçã e café.
+              </p>
+            </section>
+            <img
+              src="https://s2.glbimg.com/rb0dnqefZ0pT0pg2C61klXHGEXc=/0x0:976x549/1080x608/smart/filters:max_age(3600)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/Z/H/75YGYiRcKrlRVl3t7K0Q/3.jpg"
+              alt="">
+          </a>
+        </section>
+        <section class="noticia-principal">
+          <a
+            href="https://ge.globo.com/futebol/times/corinthians/noticia/analise-vitoria-a-moda-corinthians-da-moral-mas-nao-pode-esconder-escolhas-ruins-contra-lanterna.ghtml">
+            <span class="principais-noticias-fita">FUTEBOL | BRASILEIRÃO</span>
+            <section class="section-noticia-principal">
+              <p class="titulo-noticia-principal">Vitória dá moral, mas não esconde escolhas ruins</p>
+              <p class="subtitulo-noticia-principal">Róger Guedes leva Fiel ao êxtase, mas postura da Chape poderia ter
+                sido melhor combatida</p>
+            </section>
+            <img
+              src="https://s2.glbimg.com/LwPeZhEx9Cvv06Q3-1-lnN1ILIQ=/0x0:2000x1328/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2021/8/I/DpM0WyQe6AY68ynXqCGA/fdkju8sxsae7ykc.jpg"
+              alt="">
+          </a>
+        </section>
+      </section>
+    </div>
+
+    <div class="links-noticias">
+      <nav class="nav-escolher-noticias" id="nav-escolher-noticias">
+        <section class="section-links-noticias-sobre">
+          <a href="#principais-noticias" class="links-noticias-sobre">principais noticias</a>
+        </section>
+        <section class="section-links-noticias-sobre">
+          <a href="#noticias-esporte" class="links-noticias-sobre">
+            <img src="./img icones/bola-esporte.svg" alt="bola" class="icones-links-noticias-sobre"> esporte</a>
+        </section>
+        <section class="section-links-noticias-sobre">
+          <a href="#noticias-tecnologia" class="links-noticias-sobre">
+            <img src="./img icones/tecnologia.svg" alt="tecnologia">tecnologia</a>
+        </section>
+        <section class="section-links-noticias-sobre">
+          <a href="#noticias-esports" class="links-noticias-sobre">
+            <img src="./img icones/esports.svg" alt="e-sports" class="icones-links-noticias-sobre">e-sports</a>
+        </section>
+      </nav>
+
+      <div class="noticias">
+        <section class="principais-noticias">
+          <span class="span-titulo-principais-noticias">principais noticias</span>
+          <section>
+            <a
+              href="https://g1.globo.com/tecnologia/noticia/2021/10/28/o-que-e-o-metaverso-apontado-como-o-futuro-do-facebook-por-mark-zuckerberg.ghtml">
+              <section>
+                <span class="titulo-noticia">O que é o metaverso, apontado como o futuro do Facebook por Mark
+                  Zuckerberg</span>
+                <img src="./imgs principais noticias/metaverso-.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Empresa anunciou mudança de nome, que passará a se chamar 'meta', em referência
+                ao
+                conceito de universo virtual.</p>
+              <span class="data-publicacao">17:53 | 27/10/21</span>
+            </a>
+          </section>
+          <section>
+            <a
+              href="https://g1.globo.com/rj/rio-de-janeiro/carnaval/2022/selecao-do-samba/noticia/2021/10/27/selecao-tinga.ghtml">
+              <section>
+                <span class="titulo-noticia">Após perder 38 kg, Tinga celebrará Martinho e as próprias conquistas na
+                  Sapucaí pela Vila Isabel.</span>
+                <img src="./imgs principais noticias/tinga.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Intérprete saiu de 128 kg para 90 kg ao longo de três anos. Intérprete afirma
+                que
+                o fôlego aumentou, mas a voz marcante segue a mesma
+              </p>
+              <span class="data-publicacao">13:03 | 27/10/21</span>
+            </a>
+          </section>
+          <section>
+            <a
+              href="https://g1.globo.com/politica/noticia/2021/10/27/vacina-nao-aumenta-propensao-de-ter-outras-doencas-diz-presidente-da-anvisa.ghtml">
+              <section>
+                <span class="titulo-noticia">Vacina não aumenta risco de outras doenças, diz chefe da Anvisa</span>
+                <img src="./imgs principais noticias/presidente anvisa.jpeg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">O presidente da Agência Nacional de Vigilância Sanitária (Anvisa), Antonio Barra
+                Torres, disse nesta quarta-feira (27), na abertura de uma reunião da diretoria da agência, que nenhuma
+                vacina contra a Covid aumenta a "propensão de ter outras doenças".</p>
+              <span class="data-publicacao">12:28 | 27/10/21</span>
+            </a>
+          </section>
+          <section>
+            <a
+              href="https://g1.globo.com/pop-arte/cinema/noticia/2021/10/27/diretor-assistente-de-rust-dave-halls-diz-que-nao-fez-toda-a-inspecao-da-arma-que-deu-a-alec-baldwin.ghtml">
+              <section>
+                <span class="titulo-noticia">diretor assistente diz que não fez inspeção completa na arma que deu a Alec
+                  Baldwin</span>
+                <img src="./imgs principais noticias/alec-baldwin-telefone.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Arma pode ter disparado projétil de chumbo,afirma polícia</p>
+              <span class="data-publicacao">12:05 | 27/10/21</span>
+            </a>
+          </section>
+          <section>
+            <a
+              href="https://g1.globo.com/mundo/noticia/2021/10/27/parlamento-de-portugal-se-prepara-para-rejeitar-orcamento-e-derrubar-o-governo.ghtml">
+              <section>
+                <span class="titulo-noticia">Crise do orçamento em Portugal ameaça derrubar governo socialista</span>
+                <img src="./imgs principais noticias/crise-portugal.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Aliança de esquerda rachou, e nova eleição pode ser convocada no parlamento.</p>
+              <span class="data-publicacao" id="noticias-esporte">14:53 | 27/10/21</span>
+            </a>
+          </section>
+          <a href="https://g1.globo.com/">
+            <button class="bt-ver-mais-noticias-laterais">ver mais</button>
+          </a>
+        </section>
+
+        <section class="noticias-esporte">
+          <span class="span-titulo-esporte">Esporte</span>
+          <section>
+            <a
+              href="https://ge.globo.com/rj/futebol/brasileirao-serie-b/noticia/vasco-x-csa-veja-onde-assistir-escalacoes-desfalques-e-arbitragem.ghtml">
+              <section>
+                <span class="titulo-noticia">Vasco x CSA: escalações, desfalques e arbitragem</span>
+                <img src="./imgs esporte/vasco.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Tudo o que você precisa saber sobre o jogo da 32ª rodada da Série B.</p>
+              <span class="data-publicacao">09:54 | 28/10/21</span>
+            </a>
+          </section>
+          <section>
+            <a
+              href="https://ge.globo.com/futebol/times/cruzeiro/noticia/analise-cruzeiro-sofre-outro-golpe-na-serie-b-expoe-fragilidade-tecnica-e-precisa-planejar-2022.ghtml">
+              <section>
+                <span class="titulo-noticia">Cruzeiro sofre outro golpe na Série B e precisa planejar 2022</span>
+                <img src="./imgs esporte/cruzeiro.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Faltando seis rodadas para o fim da Segunda Divisão, Raposa está a 14 pontos do
+                G-4 e a 7 da zona de rebaixamento</p>
+              <span class="data-publicacao">09:48 | 28/10/21</span>
+            </a>
+          </section>
+
+          <section>
+            <a
+              href="https://ge.globo.com/pe/futebol/times/sport/noticia/sport-volta-de-sao-paulo-com-derrotas-marcadas-por-lances-de-bola-parada-e-gols-bizarros.ghtml">
+              <section>
+                <span class="titulo-noticia">Além da bola parada, Sport sofre gols acidentais (e bizarros) em sequência
+                  e se complica no Z-4</span>
+                <img src="./imgs esporte/sport.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Quatro dos cinco gols sofridos pelo Leão nos dois últimos jogos nasceram em
+                lances de bola parada.</p>
+              <span class="data-publicacao">09:45 | 28/10/21</span>
+            </a>
+          </section>
+
+          <section>
+            <a
+              href="https://ge.globo.com/futebol/times/corinthians/noticia/noticias-corinthians-gabriel-pereira-renovacao-bastidores-afastamento.ghtml">
+              <section>
+                <span class="titulo-noticia">Com dificuldade na renovação, Corinthians já cogita afastamento de Gabriel
+                  Pereira</span>
+                <img src="./imgs esporte/gabriel pereira.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Diretoria mantém conversas com os empresários do atacante e espera concluir a
+                renovação.</p>
+              <span class="data-publicacao">18:00 | 27/10/21</span>
+            </a>
+          </section>
+
+          <section>
+            <a
+              href="https://ge.globo.com/futebol/times/flamengo/noticia/gabigol-do-flamengo-se-manifesta-apos-incidentes-no-maracana-jamais-aceitarei-agressoes.ghtml">
+              <section>
+                <span class="titulo-noticia">Gabigol se manifesta após incidentes no Maracanã: "Jamais
+                  aceitarei agressões</span>
+                <img src="./imgs esporte/gabigol.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Família do jogador foi hostilizada após derrota para o Athletico-PR, e atacante
+                foi atingido por copo de cerveja ao deixar o gramado.</p>
+              <span class="data-publicacao" id="noticias-tecnologia">17:57 | 27/10/21</span>
+            </a>
+          </section>
+          <a href="https://ge.globo.com/">
+            <button class="bt-ver-mais-noticias-laterais">ver mais</button>
+          </a>
+        </section>
+
+        <section class="noticias-tecnologia">
+          <span class="span-titulo-tecnologia">tecnologia</span>
+          <section>
+            <a
+              href="https://www.techtudo.com.br/noticias/2021/10/nave-lanca-pc-gamer-com-chips-intel-de-12a-geracao.ghtml">
+              <section>
+                <span class="titulo-noticia">PC gamer com 'melhor processador do mundo para jogos' chega ao
+                  Brasil</span>
+                <img src="./imgs tecnologia/nave11.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Desktop com Intel de última geração está preparado para receber memórias RAM do
+                tipo DDR5.</p>
+              <span class="data-publicacao">15:26 | 28/10/21</span>
+            </a>
+          </section>
+          <section>
+            <a
+              href="https://www.techtudo.com.br/noticias/2021/10/ios-151-chega-com-share-play-e-funcoes-para-iphone-13-veja-novidades.ghtml">
+              <section>
+                <span class="titulo-noticia">iOS 15.1 chega com Share Play e funções para iPhone 13; veja
+                  novidades</span>
+                <img src="./imgs tecnologia/ios 15.1.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Upgrade do iOS 15 libera modo de stream compartilhado com amigos e também novos
+                recursos de imagem no iPhone 13 Pro Max.</p>
+              <span class="data-publicacao">15:23 | 28/10/21</span>
+            </a>
+          </section>
+
+          <section>
+            <a
+              href="https://www.techtudo.com.br/noticias/2021/10/samsung-anuncia-novos-galaxy-book-com-chips-intel-de-11a-geracao.ghtml">
+              <section>
+                <span class="titulo-noticia">Samsung anuncia novos Galaxy Book com chips Intel de 11ª geração</span>
+                <img src="./imgs tecnologia/galaxy-book.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Mas ainda não há previsão de lançamento dos novos Galaxy Book no Brasil.</p>
+              <span class="data-publicacao">15:20 | 28/10/21</span>
+            </a>
+          </section>
+
+
+          <section>
+            <a
+              href="https://www.techtudo.com.br/noticias/2021/10/intel-revela-processadores-de-12a-geracao-para-desktops.ghtml">
+              <section>
+                <span class="titulo-noticia">Intel revela processadores de 12ª geração para desktops</span>
+                <img src="./imgs tecnologia/intel-12th.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Lançamentos incluem o Intel Core i9-12900K, que a fabricante diz ser o 'melhor
+                processador do mundo para jogos'.</p>
+              <span class="data-publicacao">15:19 | 28/10/21</span>
+            </a>
+          </section>
+
+          <section>
+            <a
+              href="https://www.techtudo.com.br/noticias/2021/10/star-wars-seagate-lanca-ssd-em-homenagem-a-franquia.ghtml">
+              <section>
+                <span class="titulo-noticia">Star Wars: Seagate lança SSD em homenagem à franquia</span>
+                <img src="./imgs tecnologia/seagate.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Produtos com tema de Star Wars têm design único e são indicados para gamers e
+                colecionadores.</p>
+              <span class="data-publicacao" id="noticias-esports">15:17 | 28/10/21</span>
+            </a>
+          </section>
+          <a href="https://g1.globo.com/tecnologia/">
+            <button class="bt-ver-mais-noticias-laterais">ver mais</button>
+          </a>
+        </section>
+
+        <section class="noticias-esports">
+          <span class="span-titulo-esports">E-sports</span>
+          <section>
+            <a
+              href="https://ge.globo.com/esports/free-fire/ao-vivo/lbff-2021-acompanhe-a-final-da-lbff-6-em-tempo-real.ghtml">
+              <section>
+                <span class="titulo-noticia">LBFF 2021: B4 é campeã da LBFF 6</span>
+                <img src="./imgs esports/b4-lbff-6.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Equipe conquista competição de forma inédita</p>
+              <span class="data-publicacao">22:12 | 01/11/21</span>
+            </a>
+          </section>
+          <section>
+            <a
+              href="https://ge.globo.com/esports/fortnite/noticia/fortnite-epic-games-anuncia-conjunto-do-chapolin-colorado.ghtml">
+              <section>
+                <span class="titulo-noticia">Fortnite: Epic Games anuncia conjunto do Chapolin Colorado</span>
+                <img src="./imgs esports/fortnite.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">O pacote do famoso personagem de Roberto Gómez Bolaños chegará à loja do jogo em
+                1º de novembro</p>
+              <span class="data-publicacao">15:14 | 28/10/21</span>
+            </a>
+          </section>
+
+          <section>
+            <a
+              href="https://ge.globo.com/esports/csgo/noticia/pgl-major-stockholm-2021-tabela-de-classificacao-e-times.ghtml">
+              <section>
+                <span class="titulo-noticia">PGL Major Stockholm 2021: tabela de classificação e times</span>
+                <img src="./imgs esports/cs-go-pgl-major-2021.jpeg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Confira a classificação atualizada das etapas New Challengers e New Legends do
+                Major de CS:GO</p>
+              <span class="data-publicacao">22:13 | 01/11/21</span>
+            </a>
+          </section>
+          <section>
+            <a
+              href="https://ge.globo.com/esports/lol/noticia/worlds-2021-semi-tem-duelo-showmaker-x-faker-veja-dados.ghtml">
+              <section>
+                <span class="titulo-noticia">Worlds 2021: semi tem duelo ShowMaker x Faker; veja dados</span>
+                <img src="./imgs esports/lol-.jpg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Uma das semifinais opõe maiores nomes do League of Legends.</p>
+              <span class="data-publicacao">15:04 | 28/10/21</span>
+            </a>
+          </section>
+
+          <section>
+            <a
+              href="https://ge.globo.com/esports/rainbow-6/noticia/esports-awards-2021-paluh-syaz-e-cauan7-sao-indicados.ghtml">
+              <section>
+                <span class="titulo-noticia">Esports Awards 2021: Paluh, Syaz e Cauan7 são indicados</span>
+                <img src="./imgs esports/esports-awards.jpeg" alt="img-noticia">
+              </section>
+              <p class="resumo-noticia">Rainbow Six brasileiro aparece com quatro indicações, incluindo time do ano</p>
+              <span class="data-publicacao">22:15 | 01/11/21</span>
+            </a>
+          </section>
+          <a href="">
+            <button class="bt-ver-mais-noticias-laterais">ver mais</button>
+          </a>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
